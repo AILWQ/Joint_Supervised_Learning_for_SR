@@ -79,7 +79,7 @@ You can configure the `config.yaml` as you choose. If you only have singe GPU, y
 You can run the following script to train the model:
 
 ```
-python train_pytorch.py
+CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 train_pytorch.py
 ```
 
 
