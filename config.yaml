@@ -1,0 +1,108 @@
+train_path: ./Dataset/2_var/5000000
+val_path: ./Dataset/2_var/5000000
+
+
+num_of_workers: 0 # 28
+batch_size: 32
+epochs: 50
+lr: 0.0001
+lr_decay: False
+betas: [0.9, 0.95]
+grad_norm_clip: 1.0
+warmup_tokens: 10240 # 512*20 these two numbers come from the GPT-3 paper, but may not be good defaults elsewhere
+final_tokens: 120000000 # 2*len(train_dataset)*blockSize # (at what point we reach 10% of original LR)
+weight_decay: 0.1 # only applied on matmul weights
+dropout: 0.1
+embd_pdrop: 0.1
+resid_drop: 0.1
+attn_drop: 0.1
+val_check_interval: 1.0
+precision: 16
+gpu: 4
+scale_weight: 0.2
+
+dataset_train:
+  total_variables: #Do not fill
+  total_coefficients: #Do not fill
+  num_vars: 2
+  num_y: 1
+  number_of_points: 100 # fix the number of points
+  block_size: 60
+  max_number_of_points: 800  #2000 before
+  type_of_sampling_points: logarithm
+  predict_c: True
+  fun_support:
+    max: 10
+    min: -10
+  constants:
+    num_constants: 3
+    additive:
+      max: 2
+      min: -2
+    multiplicative:
+      max: 2
+      min: -2
+
+dataset_val:
+  total_variables: #Do not fill
+  total_coefficients: #Do not fill
+  max_number_of_points: 500
+  type_of_sampling_points: constant
+  predict_c: True
+  fun_support:
+    max: 10
+    min: -10
+  constants:
+    num_constants: 3
+    additive:
+      max: 2
+      min: -2
+    multiplicative:
+      max: 5
+      min: 0.1
+
+dataset_test:
+  total_variables: #Do not fill
+  total_coefficients: #Do not fill
+  max_number_of_points: 500
+  type_of_sampling_points: constant
+  predict_c: False
+  fun_support:
+    max: 10
+    min: -10
+  constants:
+    num_constants: 3
+    additive:
+      max: 2
+      min: -2
+    multiplicative:
+      max: 5
+      min: 0.1
+
+architecture:
+  sinuisodal_embeddings: False
+  dec_pf_dim: 512
+  dec_layers: 8
+  dim_hidden: 512 #512
+  num_features: 10
+  ln: True
+  input_normalization: False
+  src_pad_idx: 0
+  trg_pad_idx: 0
+  length_eq: 60
+  mean: 0.5  
+  std: 0.5 
+  dim_input: 3
+  num_heads: 8
+  output_dim: 60
+
+inference:
+  beam_size: 128
+  bfgs:
+    activated: True
+    n_restarts: 20
+    add_coefficients_if_not_existing: False
+    normalization_o: False
+    idx_remove: True
+    normalization_type: MSE
+    stop_time: 1e9
