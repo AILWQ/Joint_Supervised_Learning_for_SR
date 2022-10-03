@@ -30,7 +30,7 @@ Pytorch implementation for the paper "Transformer-based model for symbolic regre
 
 # Dataset Generation
 
-First, if you want to change the defaults value, configure the dataset_configuration.json file:
+First, if you want to change the defaults value, configure the `dataset_configuration.json` file:
 
 ```
 {
@@ -90,6 +90,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node
 - https://github.com/brendenpetersen/deep-symbolic-optimization
 - https://github.com/SymposiumOrganization/NeuralSymbolicRegressionThatScales
 - https://github.com/trevorstephens/gplearn
+- https://github.com/ma-xu/pointMLP-pytorch
 
 
 
