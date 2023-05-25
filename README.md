@@ -4,13 +4,13 @@
 
 
 
-This repository contains the official Pytorch implementation for the paper "Transformer-based model for symbolic regression via joint supervised learning" [ICLR 2023]. 
+This repository contains the official Pytorch implementation for the paper "Transformer-based model for symbolic regression via joint supervised learning" [ICLR' 23]. 
 
 [Paper](https://openreview.net/forum?id=ULzyv9M1j5)
 
 [ICLR 2023](https://iclr.cc/virtual/2023/poster/10690)
 
-# Getting started
+## Getting started
 
 - Install Anaconda and create a new environment
 
@@ -36,7 +36,7 @@ This repository contains the official Pytorch implementation for the paper "Tran
 
 
 
-# Getting datasets
+## Getting datasets
 
 First, if you want to change the defaults value, configure the `dataset_configuration.json` file:
 
@@ -80,7 +80,7 @@ First, if you want to change the defaults value, configure the `dataset_configur
 
   
 
-#  DDP Training
+##  DDP Training
 
 You can configure the `config.yaml` as you choose. If you only have singe GPU, you will need to comment out the DDP code in `train_pytorch.py`.
 
@@ -92,17 +92,15 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node
 
 
 
-# References
+## Acknowledgment
 
-- https://github.com/mojivalipour/symbolicgpt
-- https://github.com/brendenpetersen/deep-symbolic-optimization
-- https://github.com/SymposiumOrganization/NeuralSymbolicRegressionThatScales
-- https://github.com/trevorstephens/gplearn
-- https://github.com/ma-xu/pointMLP-pytorch
+Our implementation is mainly refers to the following codebases. We gratefully thank the authors for their wonderful works.
+
+[SymbolicGPT](https://github.com/mojivalipour/symbolicgpt), [DSO](https://github.com/brendenpetersen/deep-symbolic-optimization), [NeSymReS](https://github.com/SymposiumOrganization/NeuralSymbolicRegressionThatScales), [gplearn](https://github.com/trevorstephens/gplearn), [PointMLP](https://github.com/ma-xu/pointMLP-pytorch)
 
 
 
-# Citing this work
+## Citing this work
 
 If you found our work useful and used code, please use the following citation:
 
