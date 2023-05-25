@@ -4,9 +4,9 @@
 
 
 
-This repository contains the official Pytorch implementation for the paper "Transformer-based model for symbolic regression via joint supervised learning" [ICLR' 23]. 
+This repository contains the official Pytorch implementation for the paper "***Transformer-based model for symbolic regression via joint supervised learning***" [ICLR' 23]. 
 
-[Paper](https://openreview.net/forum?id=ULzyv9M1j5)|[ICLR 2023](https://iclr.cc/virtual/2023/poster/10690)
+[Paper](https://openreview.net/forum?id=ULzyv9M1j5) | [ICLR 2023](https://iclr.cc/virtual/2023/poster/10690) | ![Python Versions](https://img.shields.io/badge/Python-3.7%20%7C%203.8%20%7C%203.9-blue)
 
 ## Getting started
 
@@ -52,31 +52,31 @@ First, if you want to change the defaults value, configure the `dataset_configur
 
 ## Generate expressions skeletons base
 
-- You can run this script to generate expressions skeletons:
+You can run this script to generate expressions skeletons:
 
-  ```
-  python data_creation/dataset_creation.py --number_of_expressions NumberOfExpressions --no-debug #Replace NumberOfExpressions with the number of expressions you want to generate
-  ```
+```
+python data_creation/dataset_creation.py --number_of_expressions NumberOfExpressions --no-debug #Replace NumberOfExpressions with the number of expressions you want to generate
+```
 
 ## Generate datasets with different numbers of expressions with different constants
 
 ### Generate training set
 
-- Based on the first step, you can run `add_points_to_json.py` and set `number_per_equation` to the number of expressions with different constants. The dataset will be saved as a JSON file. Each sample in the file contains the data points, the skeleton, the first-order traversal list, and the expression itself.
+Based on the first step, you can run `add_points_to_json.py` and set `number_per_equation` to the number of expressions with different constants. The dataset will be saved as a JSON file. Each sample in the file contains the data points, the skeleton, the first-order traversal list, and the expression itself.
 
 ### Generate validation set
 
-- You can randomly select 1000 expression skeletons from the skeleton base, then assign different constants through running `add_points_to_json.py` and save it as a JSON file.
+You can randomly select 1000 expression skeletons from the skeleton base, then assign different constants through running `add_points_to_json.py` and save it as a JSON file.
 
 ### Generate SSDNC benchmark
 
-- Run following script to generate SSDNC benchmark:
+Run following script to generate SSDNC benchmark:
 
-  ```
-  python gen_SSDNC_benchmark.py
-  ```
+```
+python gen_SSDNC_benchmark.py
+```
 
-  
+
 
 ##  DDP Training
 
