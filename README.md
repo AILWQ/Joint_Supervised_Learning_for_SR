@@ -10,27 +10,26 @@ This repository contains the official Pytorch implementation for the paper "***T
 
 ## Getting started
 
-- Install Anaconda and create a new environment
+1. Install Anaconda and create a new environment
 
-- Install the following packages in turn:
+2. Install the following packages:
 
-  ```python
-  pip install numpy
-  pip install sympy
-  pip install torch
-  pip install multiprocessing
-  pip install pickle
-  pip install h5py
-  pip install pathlib
-  pip install omegaconf
-  pip install tqdm
-  pip install gplearn
-  pip install glob
-  pip install json
-  pip install functools
-  pip install hydra
-  pip install transformers
-  ```
+- Python >=3.6
+- numpy
+- sympy
+- torch >= 1.1
+- multiprocessing
+- pickle
+- h5py
+- pathlib
+- omegaconf
+- tqdm
+- gplearn
+- glob
+- json
+- functools
+- hydra
+- transformers
 
 
 
