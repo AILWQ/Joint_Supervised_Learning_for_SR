@@ -1,8 +1,16 @@
 # Transformer-based model for symbolic regression via joint supervised learning
 
-Pytorch implementation for the paper "Transformer-based model for symbolic regression via joint supervised learning". 
+<p align="center">
+<img src="method_intro.pdf" width=750/>
+</p>
 
-# Installation
+This repository contains the official Pytorch implementation for the paper "Transformer-based model for symbolic regression via joint supervised learning" [ICLR 2023]. 
+
+[Paper](https://openreview.net/forum?id=ULzyv9M1j5)
+
+[ICLR 2023](https://iclr.cc/virtual/2023/poster/10690)
+
+# Getting started
 
 - Install Anaconda and create a new environment
 
@@ -28,7 +36,7 @@ Pytorch implementation for the paper "Transformer-based model for symbolic regre
 
 
 
-# Dataset Generation
+# Getting datasets
 
 First, if you want to change the defaults value, configure the `dataset_configuration.json` file:
 
@@ -84,13 +92,28 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node
 
 
 
-# Reference
+# References
 
 - https://github.com/mojivalipour/symbolicgpt
 - https://github.com/brendenpetersen/deep-symbolic-optimization
 - https://github.com/SymposiumOrganization/NeuralSymbolicRegressionThatScales
 - https://github.com/trevorstephens/gplearn
 - https://github.com/ma-xu/pointMLP-pytorch
+
+
+
+# Citing this work
+
+If you found our work useful and used code, please use the following citation:
+
+```
+@inproceedings{litransformer,
+  title={Transformer-based model for symbolic regression via joint supervised learning},
+  author={Li, Wenqiang and Li, Weijun and Sun, Linjun and Wu, Min and Yu, Lina and Liu, Jingyi and Li, Yanjie and Tian, Songsong},
+  booktitle={The Eleventh International Conference on Learning Representations},
+  year={2023}
+}
+```
 
 
 
