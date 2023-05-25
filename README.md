@@ -1,12 +1,14 @@
 # Transformer-based model for symbolic regression via joint supervised learning
 
 <p align="center">
-<img src="overview.png" width=750/>
+<img src="./overview.png" width=750/>
 </p>
 
 This repository contains the official Pytorch implementation for the paper "Transformer-based model for symbolic regression via joint supervised learning" [ICLR 2023]. 
 
-[Paper](https://openreview.net/forum?id=ULzyv9M1j5)         [ICLR 2023](https://iclr.cc/virtual/2023/poster/10690)
+[Paper](https://openreview.net/forum?id=ULzyv9M1j5)
+
+[ICLR 2023](https://iclr.cc/virtual/2023/poster/10690)
 
 # Getting started
 
