@@ -1,4 +1,4 @@
-# Transformer-based model for symbolic regression via joint supervised learning
+# T-JSL: Transformer-based model for symbolic regression via joint supervised learning
 
 ![overview](Overview.png)
 
