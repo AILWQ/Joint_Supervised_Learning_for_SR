@@ -104,11 +104,13 @@ Our implementation is mainly refers to the following codebases. We gratefully th
 If you found our work useful and used code, please use the following citation:
 
 ```
-@inproceedings{litransformer,
-  title={Transformer-based model for symbolic regression via joint supervised learning},
-  author={Li, Wenqiang and Li, Weijun and Sun, Linjun and Wu, Min and Yu, Lina and Liu, Jingyi and Li, Yanjie and Tian, Songsong},
-  booktitle={The Eleventh International Conference on Learning Representations},
-  year={2023}
+@inproceedings{
+li2023transformerbased,
+title={Transformer-based model for symbolic regression via joint supervised learning},
+author={Wenqiang Li and Weijun Li and Linjun Sun and Min Wu and Lina Yu and Jingyi Liu and Yanjie Li and Songsong Tian},
+booktitle={The Eleventh International Conference on Learning Representations },
+year={2023},
+url={https://openreview.net/forum?id=ULzyv9M1j5}
 }
 ```
 
