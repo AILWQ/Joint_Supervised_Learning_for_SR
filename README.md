@@ -4,11 +4,13 @@
 
 
 
-This repository contains the official Pytorch implementation for the paper "***Transformer-based model for symbolic regression via joint supervised learning***" [ICLR' 23]. 
+This repository contains the official Pytorch implementation for the paper [***Transformer-based model for symbolic regression via joint supervised learning***](https://openreview.net/forum?id=ULzyv9M1j5) [ICLR 2023]. 
 
-[Paper](https://openreview.net/forum?id=ULzyv9M1j5) | [ICLR 2023](https://iclr.cc/virtual/2023/poster/10690) | ![Python Versions](https://img.shields.io/badge/Python-3.7%20%7C%203.8%20%7C%203.9-blue)
+[![Paper](https://img.shields.io/badge/Paper-📖-blue?)](https://openreview.net/forum?id=ULzyv9M1j5)
+![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=AILWQ.Joint_Supervised_Learning_for_SR&left_color=red&right_color=green&left_text=Hello%20Visitors)
+![GitHub Repo stars](https://img.shields.io/github/stars/AILWQ/Joint_Supervised_Learning_for_SR?style=social)
 
-## Getting started
+## 📦 Getting started
 
 1. Install Anaconda and create a new environment
 
@@ -33,7 +35,7 @@ This repository contains the official Pytorch implementation for the paper "***T
 
 
 
-## Getting datasets
+### Getting datasets
 
 First, if you want to change the defaults value, configure the `dataset_configuration.json` file:
 
@@ -49,7 +51,7 @@ First, if you want to change the defaults value, configure the `dataset_configur
 }
 ```
 
-## Generate expressions skeletons base
+### Generate expressions skeletons base
 
 You can run this script to generate expressions skeletons:
 
@@ -57,17 +59,17 @@ You can run this script to generate expressions skeletons:
 python data_creation/dataset_creation.py --number_of_expressions NumberOfExpressions --no-debug #Replace NumberOfExpressions with the number of expressions you want to generate
 ```
 
-## Generate datasets with different numbers of expressions with different constants
+### Generate datasets with different numbers of expressions with different constants
 
-### Generate training set
+#### Generate training set
 
 Based on the first step, you can run `add_points_to_json.py` and set `number_per_equation` to the number of expressions with different constants. The dataset will be saved as a JSON file. Each sample in the file contains the data points, the skeleton, the first-order traversal list, and the expression itself.
 
-### Generate validation set
+#### Generate validation set
 
 You can randomly select 1000 expression skeletons from the skeleton base, then assign different constants through running `add_points_to_json.py` and save it as a JSON file.
 
-### Generate SSDNC benchmark
+#### Generate SSDNC benchmark
 
 Run following script to generate SSDNC benchmark:
 
@@ -77,7 +79,7 @@ python gen_SSDNC_benchmark.py
 
 
 
-##  DDP Training
+## 💻 DDP Training
 
 You can configure the `config.yaml` as you choose. If you only have singe GPU, you will need to comment out the DDP code in `train_pytorch.py`.
 
@@ -89,7 +91,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node
 
 
 
-## Acknowledgment
+## 🙏 Acknowledgment
 
 Our implementation is mainly refers to the following codebases. We gratefully thank the authors for their wonderful works.
 
@@ -97,7 +99,7 @@ Our implementation is mainly refers to the following codebases. We gratefully th
 
 
 
-## Citing this work
+## 🔗 Citing this work
 
 If you found our work useful and used code, please use the following citation:
 
