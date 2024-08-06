@@ -7,6 +7,7 @@
 This repository contains the official Pytorch implementation for the paper [***Transformer-based model for symbolic regression via joint supervised learning***](https://openreview.net/forum?id=ULzyv9M1j5) [ICLR 2023]. 
 
 [![Paper](https://img.shields.io/badge/Paper-📖-blue?)](https://openreview.net/forum?id=ULzyv9M1j5)
+[![Citation](https://img.shields.io/badge/citation-16-green)](#projects-using-Joint_Supervised_Learning_for_SR)
 ![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=AILWQ.Joint_Supervised_Learning_for_SR&left_color=red&right_color=green&left_text=Hello%20Visitors)
 ![GitHub Repo stars](https://img.shields.io/github/stars/AILWQ/Joint_Supervised_Learning_for_SR?style=social)
 
