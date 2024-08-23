@@ -1,6 +1,9 @@
-# T-JSL: Transformer-based model for symbolic regression via joint supervised learning
+# T-JSL
+<div align="center">
+  <img src="img/ICLR-logo.svg" alt="ICLR-logo">
+</div>
 
-![overview](Overview.png)
+![overview](img/Overview.png)
 
 
 
